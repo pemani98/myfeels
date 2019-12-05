@@ -2,7 +2,14 @@
 <html>
   <head>
     <title>Example of the Authorization Code flow with Spotify</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
     <style type="text/css">
       #login, #loggedin {
         display: none;
@@ -16,6 +23,17 @@
     </style>
   </head>
 
+  <div class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav" style="max-width:1200px;margin:auto">
+    <div>
+    <a class="w3-rightcenter w3-padding-10", href="/home">Home</a>
+      <a class="w3-center w3-padding-10", href="/history">History</a>
+      <a class="w3-leftcenter w3-padding-10", href="/new-music">New Music</a>
+      <a class="w3-leftcenter w3-padding-10", href="/recs">Music Recommendations </a>
+      <br> 
+    
+    </div>
+</div>
+
   <body>
     <div class="container">
       <div id="login">
@@ -26,10 +44,12 @@
         <div id="user-profile">
         </div>
         <div id="oauth">
-        </div>
+        <!-- </div>
         <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
-      </div>
+      </div> -->
     </div>
+
+    
 
     <script id="user-profile-template" type="text/x-handlebars-template">
       <h1>Logged in as {{display_name}}</h1>
@@ -44,7 +64,6 @@
             <dt>Email</dt><dd>{{email}}</dd>
             <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
             <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
-            <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
             <dt>Country</dt><dd>{{country}}</dd>
           </dl>
         </div>
@@ -52,10 +71,10 @@
     </script>
 
     <script id="oauth-template" type="text/x-handlebars-template">
-      <h2>oAuth info</h2>
+      <!-- <h2>oAuth info</h2> -->
       <dl class="dl-horizontal">
-        <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
-        <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
+        <!-- <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+        <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd> -->
       </dl>
     </script>
 
@@ -139,4 +158,5 @@
     </script>
   </body>
 </html>
+
 
